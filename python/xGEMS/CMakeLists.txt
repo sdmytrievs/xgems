@@ -25,8 +25,8 @@ endif()
 add_custom_target(xgems ALL
     COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:PyxGEMS> 
         ${CMAKE_CURRENT_BINARY_DIR}/$<TARGET_FILE_NAME:PyxGEMS>
-#    COMMAND ${PYTHON_EXECUTABLE}  -m pip install --prefix ${CMAKE_BINARY_DIR} --ignore-installed .
-    COMMAND ${PYTHON_EXECUTABLE}  -m pip install --prefix "${CMAKE_BINARY_DIR}/demos" --ignore-installed .
+#    COMMAND ${Python3_EXECUTABLE}  -m pip install --prefix ${CMAKE_BINARY_DIR} --ignore-installed .
+    COMMAND ${Python3_EXECUTABLE}  -m pip install --prefix "${CMAKE_BINARY_DIR}/demos" --ignore-installed .
     WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 
 # Set dependencies of xGEMS target
@@ -47,7 +47,7 @@ install(CODE
     endif()
 
     execute_process(
-        COMMAND ${PYTHON_EXECUTABLE} -m pip install ${CMAKE_CURRENT_BINARY_DIR}
+        COMMAND ${Python3_EXECUTABLE} -m pip install ${CMAKE_CURRENT_BINARY_DIR}
         WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 "
 )
@@ -72,7 +72,7 @@ install(CODE
     endif()
 
     execute_process(
-        COMMAND ${PYTHON_EXECUTABLE} -m pip install --prefix \${XGEMS_PYTHON_INSTALL_PREFIX_NATIVE} ${CMAKE_CURRENT_BINARY_DIR}
+        COMMAND ${Python3_EXECUTABLE} -m pip install --prefix \${XGEMS_PYTHON_INSTALL_PREFIX_NATIVE} ${CMAKE_CURRENT_BINARY_DIR}
         WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
 "
 )
