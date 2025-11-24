@@ -1,5 +1,5 @@
 # Set cmake version requirement
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.16...4.2)
 
 # Set the name of the project
 project(xGEMS VERSION 2.0.2 LANGUAGES CXX)
