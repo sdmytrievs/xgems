@@ -942,9 +942,9 @@ Sets an upper bound (maximum amount allowed to form) for a species identified by
     engine.set_species_lower_bound( 8, 400, "moles")
 )doc")
 
-            .def("supress_phase", &ChemicalEngineMaps::supress_phase, py::arg("phase_name"), py::arg("min_amount")=0, py::arg("max_amount")=1e-15,
+            .def("suppress_phase", &ChemicalEngineMaps::suppress_phase, py::arg("phase_name"), py::arg("min_amount")=0, py::arg("max_amount")=1e-15,
              R"doc(
-Supresses a phase in GEM calculation.
+Suppresses a phase in GEM calculation.
 
 :param str phase_name: Phase name.
 :param float min_amount: Lower amount of specie in mol, default 0.
@@ -954,11 +954,11 @@ Supresses a phase in GEM calculation.
 
 .. code-block:: python
 
-    engine.supress_phase('gas_gen')
+    engine.suppress_phase('gas_gen')
 )doc")
-            .def("supress_multiple_phases", &ChemicalEngineMaps::supress_multiple_phases, py::arg("phase_name_list"), py::arg("min_amount")=0, py::arg("max_amount")=1e-15,
+            .def("suppress_multiple_phases", &ChemicalEngineMaps::suppress_multiple_phases, py::arg("phase_name_list"), py::arg("min_amount")=0, py::arg("max_amount")=1e-15,
              R"doc(
-Supresses multiple phases in calculation as given in phase names list.
+Suppresses multiple phases in calculation as given in phase names list.
 
 :param list phase_name_list: Phase name list.
 :param float min_amount: Lower amount of specie in mol, default 0.
@@ -968,11 +968,11 @@ Supresses multiple phases in calculation as given in phase names list.
 
 .. code-block:: python
 
-    engine.supress_multiple_phases(['Dolomite-dis', 'Tin'])
+    engine.suppress_multiple_phases(['Dolomite-dis', 'Tin'])
 )doc")
-            .def("supress_species", &ChemicalEngineMaps::supress_species, py::arg("species_name"), py::arg("min_amount")=0, py::arg("max_amount")=1e-15,
+            .def("suppress_species", &ChemicalEngineMaps::suppress_species, py::arg("species_name"), py::arg("min_amount")=0, py::arg("max_amount")=1e-15,
              R"doc(
-Supresses a specie in calculation.
+Suppresses a specie in calculation.
 
 :param str species_name: Species name.
 :param float min_amount: Lower amount of specie in mol, default 0.
@@ -982,11 +982,11 @@ Supresses a specie in calculation.
 
 .. code-block:: python
 
-    engine.supress_species('Ca(CO3)@')
+    engine.suppress_species('Ca(CO3)@')
 )doc")
-            .def("supress_multiple_species", &ChemicalEngineMaps::supress_multiple_species, py::arg("species_list"), py::arg("min_amount")=0, py::arg("max_amount")=1e-15,
+            .def("suppress_multiple_species", &ChemicalEngineMaps::suppress_multiple_species, py::arg("species_list"), py::arg("min_amount")=0, py::arg("max_amount")=1e-15,
              R"doc(
-Supresses multiple species in in GEM calculation as given in species name list.
+Suppresses multiple species in in GEM calculation as given in species name list.
 
 :param list species_list: Species name list.
 :param float min_amount: Lower amount of specie in mol, default 0.
@@ -996,11 +996,11 @@ Supresses multiple species in in GEM calculation as given in species name list.
 
 .. code-block:: python
 
-    engine.supress_multiple_species(['ClO4-', 'Cl-'])
+    engine.suppress_multiple_species(['ClO4-', 'Cl-'])
 )doc")
             .def("activate_phase", &ChemicalEngineMaps::activate_phase,
              R"doc(
-Activate supressed phase in GEM calculation.
+Activate suppressed phase in GEM calculation.
 
 :param str phase_name: Phase name.
 
@@ -1012,7 +1012,7 @@ Activate supressed phase in GEM calculation.
 )doc")
             .def("activate_multiple_phases", &ChemicalEngineMaps::activate_multiple_phases,
              R"doc(
-Activate multiple supressed phases given in list.
+Activate multiple suppressed phases given in list.
 
 :param list phase_name_list: Phase name list.
 
@@ -1024,7 +1024,7 @@ Activate multiple supressed phases given in list.
 )doc")
             .def("activate_species", &ChemicalEngineMaps::activate_species,
              R"doc(
-Activate a supressed species in phase.
+Activate a suppressed species in phase.
 
 :param str species_name: Species name.
 
@@ -1036,7 +1036,7 @@ Activate a supressed species in phase.
 )doc")
             .def("activate_multiple_species", &ChemicalEngineMaps::activate_multiple_species,
              R"doc(
-Activate multiple supressed species given in the list.
+Activate multiple suppressed species given in the list.
 
 :param list species_list: Species name list.
 
@@ -1044,7 +1044,7 @@ Activate multiple supressed species given in the list.
 
 .. code-block:: python
 
-    engine.supress_multiple_species(['ClO4-', 'Cl-'])
+    engine.suppress_multiple_species(['ClO4-', 'Cl-'])
 )doc")
             ;
 
