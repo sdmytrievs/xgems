@@ -878,59 +878,59 @@ public:
 
 
      /**
-     * @brief Supresses a phase in GEM calculation.
+     * @brief Suppresses a phase in GEM calculation.
      *
      * @param phase_name (std::string) Phase name.
      * @param min_amount (double) Lower amount of specie in mol, default 0.
      * @param max_amount (double) Upper amount of specie in mol, default 1e-15.
      *
      * @code
-     * engine.supress_phase("gas_gen");
+     * engine.suppress_phase("gas_gen");
      * @endcode
      */
-    auto supress_phase(const std::string &phase_name, double min_amount=0, double max_amount=1e-15) -> void;
+    auto suppress_phase(const std::string &phase_name, double min_amount=0, double max_amount=1e-15) -> void;
 
     /**
-     * @brief Supresses multiple phases in calculation as given in phase names list.
+     * @brief Suppresses multiple phases in calculation as given in phase names list.
      *
      * @param phase_name_list (std::vector<std::string>) Phases name list.
      * @param min_amount (double) Lower amount of specie in mol, default 0.
      * @param max_amount (double) Upper amount of specie in mol, default 1e-15.
      *
      * @code
-     * engine.supress_multiple_phases({"Dolomite-dis", "Tin"});
+     * engine.suppress_multiple_phases({"Dolomite-dis", "Tin"});
      * @endcode
      */
-    auto supress_multiple_phases(const std::vector<std::string> &phase_name_list, double min_amount=0, double max_amount=1e-15) -> void;
+    auto suppress_multiple_phases(const std::vector<std::string> &phase_name_list, double min_amount=0, double max_amount=1e-15) -> void;
 
     /**
-     * @brief Supresses a specie in calculation.
+     * @brief Suppresses a specie in calculation.
      *
      * @param species_name (std::string) Species name.
      * @param min_amount (double) Lower amount of specie in mol, default 0.
      * @param max_amount (double) Upper amount of specie in mol, default 1e-15.
      *
      * @code
-     * engine.supress_species("Ca(CO3)@");
+     * engine.suppress_species("Ca(CO3)@");
      * @endcode
      */
-    auto supress_species(const std::string &species_name, double min_amount=0, double max_amount=1e-15) -> void;
+    auto suppress_species(const std::string &species_name, double min_amount=0, double max_amount=1e-15) -> void;
 
     /**
-     * @brief Supresses multiple species in in GEM calculation as given in species name list.
+     * @brief Suppresses multiple species in in GEM calculation as given in species name list.
      *
      * @param species_list (std::vector<std::string>) Species name list.
      * @param min_amount (double) Lower amount of specie in mol, default 0.
      * @param max_amount (double) Upper amount of specie in mol, default 1e-15.
      *
      * @code
-     * engine.supress_multiple_species({"ClO4-", "Cl-"});
+     * engine.suppress_multiple_species({"ClO4-", "Cl-"});
      * @endcode
      */
-    auto supress_multiple_species(const std::vector<std::string> &species_list, double min_amount=0, double max_amount=1e-15) -> void;
+    auto suppress_multiple_species(const std::vector<std::string> &species_list, double min_amount=0, double max_amount=1e-15) -> void;
 
     /**
-     * @brief Activate supressed phase in GEM calculation.
+     * @brief Activate suppressed phase in GEM calculation.
      *
      * @param phase_name (std::string) Phase name.
      *
@@ -941,7 +941,7 @@ public:
     auto activate_phase(const std::string &phase_name) -> void;
 
     /**
-     * @brief Activate multiple supressed phases given in list.
+     * @brief Activate multiple suppressed phases given in list.
      *
      * @param phase_name_list (std::vector<std::string>) Phases name list.
      *
@@ -952,7 +952,7 @@ public:
     auto activate_multiple_phases(const std::vector<std::string> &phase_name_list) -> void;
 
     /**
-     * @brief Activate multiple supressed species given in the list.
+     * @brief Activate multiple suppressed species given in the list.
      *
      * @param species_list (std::vector<std::string>) Species name list.
      *
@@ -963,7 +963,7 @@ public:
     auto activate_multiple_species(const std::vector<std::string> &species_list) -> void;
 
     /**
-     * @brief Activate a supressed species in phase.
+     * @brief Activate a suppressed species in phase.
      *
      * @param species_name (std::string) Species name.
      *

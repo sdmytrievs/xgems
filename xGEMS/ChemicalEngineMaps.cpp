@@ -574,42 +574,42 @@ auto ChemicalEngineMaps::set_species_upper_bound(Index ispecies, double val, con
 }
 
 
-// supresses a phase in GEM calculation
-auto ChemicalEngineMaps::supress_phase(const std::string& phase_name, double min_amount, double max_amount) -> void
+// suppresses a phase in GEM calculation
+auto ChemicalEngineMaps::suppress_phase(const std::string& phase_name, double min_amount, double max_amount) -> void
 {
-    supress_multiple_species(m_species_in_phase[phase_name], min_amount, max_amount);
+    suppress_multiple_species(m_species_in_phase[phase_name], min_amount, max_amount);
 }
 
-// supresses multiple phase in calculation as given in phase names list
-auto ChemicalEngineMaps::supress_multiple_phases(const std::vector<std::string>& phase_name_list, double min_amount, double max_amount) -> void
+// suppresses multiple phase in calculation as given in phase names list
+auto ChemicalEngineMaps::suppress_multiple_phases(const std::vector<std::string>& phase_name_list, double min_amount, double max_amount) -> void
 {
     for( const auto& phase: phase_name_list) {
-        supress_phase(phase, min_amount, max_amount);
+        suppress_phase(phase, min_amount, max_amount);
     }
 }
 
-// supresses species in calculation
-auto ChemicalEngineMaps::supress_species(const std::string& species_name, double min_amount, double max_amount) -> void
+// suppresses species in calculation
+auto ChemicalEngineMaps::suppress_species(const std::string& species_name, double min_amount, double max_amount) -> void
 {
     set_species_lower_bound(species_name, min_amount);
     set_species_upper_bound(species_name, max_amount);
 }
 
-// supresses multiple species in GEM calculation as given in species name list
-auto ChemicalEngineMaps::supress_multiple_species(const std::vector<std::string>& species_list, double min_amount, double max_amount) -> void
+// suppresses multiple species in GEM calculation as given in species name list
+auto ChemicalEngineMaps::suppress_multiple_species(const std::vector<std::string>& species_list, double min_amount, double max_amount) -> void
 {
     for( const auto& species: species_list) {
-        supress_species(species, min_amount, max_amount);
+        suppress_species(species, min_amount, max_amount);
     }
 }
 
-// activate supressed phase
+// activate suppressed phase
 auto ChemicalEngineMaps::activate_phase(const std::string& phase_name) -> void
 {
     activate_multiple_species(m_species_in_phase[phase_name]);
 }
 
-// activate multiple supressed phases given in list
+// activate multiple suppressed phases given in list
 auto ChemicalEngineMaps::activate_multiple_phases(const std::vector<std::string>& phase_name_list) -> void
 {
     for( const auto& phase: phase_name_list) {
@@ -617,7 +617,7 @@ auto ChemicalEngineMaps::activate_multiple_phases(const std::vector<std::string>
     }
 }
 
-// activate multiple supressed species given in the list
+// activate multiple suppressed species given in the list
 auto ChemicalEngineMaps::activate_multiple_species(const std::vector<std::string>& species_list) -> void
 {
     for( const auto& species: species_list) {
@@ -625,7 +625,7 @@ auto ChemicalEngineMaps::activate_multiple_species(const std::vector<std::string
     }
 }
 
-// activate a supressed species in phase
+// activate a suppressed species in phase
 auto ChemicalEngineMaps::activate_species(const std::string& species_name) -> void
 {
     set_species_lower_bound(species_name, 0);

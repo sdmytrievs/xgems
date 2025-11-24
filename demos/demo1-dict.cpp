@@ -150,10 +150,10 @@ int main(int argc, char **argv)
     auto lowerLimits = engine.species_lower_bounds();
     std::cout << "Lower bounds of 'Mg(HCO3)+': " << lowerLimits["Mg(HCO3)+"] << std::endl;
 
-    engine.supress_phase("gas_gen");
-    engine.supress_multiple_phases({"Dolomite-dis", "Tin"});
-    engine.supress_species("Ca(CO3)@");
-    engine.supress_multiple_species({"ClO4-", "Cl-"});
+    engine.suppress_phase("gas_gen");
+    engine.suppress_multiple_phases({"Dolomite-dis", "Tin"});
+    engine.suppress_species("Ca(CO3)@");
+    engine.suppress_multiple_species({"ClO4-", "Cl-"});
 
     engine.activate_phase("gas_gen");
     engine.activate_multiple_phases({"Dolomite-dis", "Tin"});

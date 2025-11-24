@@ -5,4 +5,4 @@ file(COPY "${CMAKE_CURRENT_SOURCE_DIR}/test_systems.py" DESTINATION "${CMAKE_CUR
 enable_testing()
 
 add_test(NAME test_systems
-COMMAND ${PYTHON_EXECUTABLE} "-m" "unittest" "-v" test_systems.py)
+COMMAND ${Python3_EXECUTABLE} "-m" "unittest" "-v" test_systems.py)

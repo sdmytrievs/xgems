@@ -17,5 +17,5 @@ dependencies:
   - nlohmann_json
   - numpy
   - eigen>=3.4.0
-  - gems3k=>4.4.2
+  - gems3k=>4.4.3
  

@@ -1,8 +1,8 @@
 # Set cmake version requirement
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.16...4.2)
 
 # Set the name of the project
-project(xGEMS VERSION 2.0.1 LANGUAGES CXX)
+project(xGEMS VERSION 2.0.2 LANGUAGES CXX)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD 17)
@@ -24,7 +24,7 @@ include(CondaAware)
 # Set the version of the project
 set(XGEMS_VERSION_MAJOR "2")
 set(XGEMS_VERSION_MINOR "0")
-set(XGEMS_VERSION_MICRO "1")
+set(XGEMS_VERSION_MICRO "2")
 set(XGEMS_VERSION "${XGEMS_VERSION_MAJOR}.${XGEMS_VERSION_MINOR}.${XGEMS_VERSION_MICRO}")
 
 # Set the output directories of the built libraries and binaries
@@ -107,27 +107,6 @@ if(${CMAKE_CXX_COMPILER_ID} STREQUAL MSVC)
         /D_SILENCE_TR1_NAMESPACE_DEPRECATION_WARNING
         /DNOMINMAX
     )
-endif()
-
-# Find Eigen library and include its directory
-#find_package(Eigen3 3.3.7 REQUIRED)
-#message(STATUS "Found Eigen3 v${Eigen3_VERSION}: ${Eigen3_INCLUDE_DIRS}")
-
-# Find the Python interpreter
-if(XGEMS_BUILD_PYTHON)
-    #if(NOT PYBIND11_PYTHON_VERSION)
-    #    set(PYBIND11_PYTHON_VERSION 2.7)
-    #endif()
-    
-    #find_package(pybind11 2.0.0 REQUIRED)
-    find_package(pybind11 2.2.0 REQUIRED)
-    message(STATUS "Found pybind11 v${pybind11_VERSION}: ${pybind11_INCLUDE_DIRS}")
-    
-    if(NOT pybind11_FOUND)
-        set(XGEMS_BUILD_PYTHON OFF)
-        message(WARNING "pybind11 has not been found. "
-            "Cannot build python bindings for XGEMS.")
-    endif()
 endif()
 
 # Set the project directory names

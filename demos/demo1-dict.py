@@ -28,7 +28,7 @@ engine.P = 100000.0
 bulk_composition = {'C': 1e-08, 'Ca': 1e-08, 'Cl': 0.002, 'H': 111.016746657646,
                     'Mg': 0.001, 'O': 55.5083933588231, 'Sn': 130.841288437146, 'Zz': 0.0}
 engine.set_bulk_composition(bulk_composition)
-engine.supress_multiple_species(['ClO4-', 'Cl-'])
+engine.suppress_multiple_species(['ClO4-', 'Cl-'])
 
 engine.equilibrate();
 

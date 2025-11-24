@@ -24,12 +24,12 @@ engine.set_species_lower_bound( 'Ca(HCO3)+', 200, "moles")
 engine.set_species_upper_bound( 'CaOH+', 500, "kg")
 engine.set_multiple_species_lower_bound( {'Mg(CO3)@':30, 'Mg(HCO3)+':40, 'Mg+2':50})
 engine.set_multiple_species_upper_bound( {'Mg(CO3)@':300, 'Mg(HCO3)+':400, 'Mg+2':500})
-engine.supress_phase('gas_gen')
-engine.supress_multiple_phases(['Dolomite-dis', 'Tin'])
-engine.supress_species('Ca(CO3)@')
-engine.supress_multiple_species(['ClO4-', 'Cl-'])
+engine.suppress_phase('gas_gen')
+engine.suppress_multiple_phases(['Dolomite-dis', 'Tin'])
+engine.suppress_species('Ca(CO3)@')
+engine.suppress_multiple_species(['ClO4-', 'Cl-'])
 
-print("\nspecies_bounds_supress")
+print("\nspecies_bounds_suppress")
 out1 = engine.species_lower_bounds
 out2 = engine.species_upper_bounds
 for name in species_names:
