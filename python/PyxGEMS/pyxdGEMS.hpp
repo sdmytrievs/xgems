@@ -720,9 +720,9 @@ Get the dictionary of phase species amounts in mol.
   )doc")
             .def_property_readonly("aq_volume_frac", &ChemicalEngineMaps::aq_volume_frac,
                                R"doc(
-  Read-only property: the volume fraction of aqueous phase in the system.
+  Read-only property: the volume fraction of aqueous phase from total system volume.
 
-  :return float: The volume fraction of aqueous phase.
+  :return float: The volume fraction of aqueous phase from total system volume.
 
   **Example:**
 
@@ -756,9 +756,9 @@ Get the dictionary of phase species amounts in mol.
   )doc")
             .def_property_readonly("phases_volume_frac", &ChemicalEngineMaps::phases_volume_frac,
                                R"doc(
-  Read-only property: the dictionary of phases and their volume fractions.
+  Read-only property: the dictionary of phases and their volume fractions from total system volume.
 
-  :return dict[str:float]: The phases volume fractions.
+  :return dict[str:float]: The phases volume fractions from total system volume.
 
   **Example:**
 

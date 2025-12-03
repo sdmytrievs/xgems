@@ -115,9 +115,9 @@ int main(int argc, char **argv)
     std::cout << "Mass fraction of 'Tin' phase: " << mas_frac["Tin"] << std::endl;
 
     auto vol_frac = engine.solids_volume_frac();
-    std::cout << "Volume fraction of 'Tin' phase: " << vol_frac["Tin"] << std::endl;
+    std::cout << "Volume fraction of 'Tin' phase from total system volume: " << vol_frac["Tin"] << std::endl;
 
-    std::cout << "Aq volume fraction: " << engine.aq_volume_frac() << std::endl;
+    std::cout << "Aq volume fraction from total system volume: " << engine.aq_volume_frac() << std::endl;
 
     auto volumes4 = engine.phases_volume();
     std::cout << "Volume of 'Tin' phase: " << volumes4["Tin"] << std::endl;
@@ -126,7 +126,7 @@ int main(int argc, char **argv)
     std::cout << "Mass of 'Tin' phase: " << masses["Tin"] << std::endl;
 
     auto volumes5 = engine.phases_volume_frac();
-    std::cout << "Volume fraction of 'aq_gen' phase: " << volumes5["aq_gen"] << std::endl;
+    std::cout << "Volume fraction of 'aq_gen' phase from total system volume: " << volumes5["aq_gen"] << std::endl;
 
     // ------------------- changes
 
