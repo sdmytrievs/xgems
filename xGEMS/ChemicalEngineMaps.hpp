@@ -663,19 +663,19 @@ public:
     /**
      * @brief Returns the volume(phase)/volume(total) ratio for solid phases.
      *
-     * @return (ValuesMap) Dictionary of solids phases volume fraction.
+     * @return (ValuesMap) Dictionary of solids phases volume fraction from total system volume.
      *
      * @code
      * auto vol_frac = engine.solids_volume_frac();
-     * std::cout << "Volume fraction of 'Tin' phase: " << vol_frac["Tin"] << std::endl;
+     * std::cout << "Volume fraction of 'Tin' phase from total system volume: " << vol_frac["Tin"] << std::endl;
      * @endcode
      */
     auto solids_volume_frac() -> ValuesMap;
 
     /**
-     * @brief Returns the volume fraction of aqueous phase in the system.
+     * @brief Returns the volume fraction of aqueous phase from total system volume.
      *
-     * @return (double) Volume fraction of aqueous phase.
+     * @return (double) Volume fraction of aqueous phase from total system volume.
      *
      * @code
      * auto volume = engine.aq_volume_frac();
@@ -708,13 +708,13 @@ public:
     auto phases_mass() -> ValuesMap;
 
     /**
-     * @brief Returns the volume fractions of all phases in the system.
+     * @brief Returns the volume fractions of all phases from total system volume.
      *
-     * @return (ValuesMap) Dictionary of phases and their volume fractions .
+     * @return (ValuesMap) Dictionary of phases and their volume fractions from total system volume.
      *
      * @code
      * auto volumes = engine.phases_volume_frac();
-     * std::cout << "Volume fraction of 'aq_gen' phase: " << volumes["aq_gen"] << std::endl;
+     * std::cout << "Volume fraction from total system volume of 'aq_gen' phase: " << volumes["aq_gen"] << std::endl;
      * @endcode
      */
     auto phases_volume_frac() -> ValuesMap;

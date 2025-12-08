@@ -401,7 +401,7 @@ auto ChemicalEngineMaps::solids_volume_frac() -> ValuesMap
     return out;
 }
 
-// Volume fraction of aqueous phase in the system
+// Volume fraction of aqueous phase from total system volume
 auto ChemicalEngineMaps::aq_volume_frac() -> double
 {
     auto out = phases_volume_frac();
@@ -420,7 +420,7 @@ auto ChemicalEngineMaps::phases_mass() -> ValuesMap
     return to_map( m_phase_names, gem.phaseMasses() );
 }
 
-// returns a dict. with phases and their volume fractions in the system
+// returns a dict. with phases and their volume fractions from total system volume
 auto ChemicalEngineMaps::phases_volume_frac() -> ValuesMap
 {
     Eigen::VectorXd volumes = gem.phaseVolumes(); 
