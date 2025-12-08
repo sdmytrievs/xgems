@@ -168,7 +168,7 @@ endif()
 
 # Build python wraper
 if(XGEMS_BUILD_PYTHON)
-    add_subdirectory(python)
+    add_subdirectory(python2)
 endif()
 
 # Add target "demos" for manual building of demos, as `make demos`, if XGEMS_BUILD_DEMOS is OFF
