@@ -2,7 +2,6 @@ name: xgems
 
 channels:
   - conda-forge
-  - defaults
 
 dependencies:
   - pip
@@ -12,7 +11,7 @@ dependencies:
   - git
   - ccache  # [unix]
   - pybind11
-  - python>=3.12
+  - python>=3.10
   - pytest
   - nlohmann_json
   - numpy
