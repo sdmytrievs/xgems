@@ -17,7 +17,7 @@ authors = [
 maintainers = [
   {name = "G.D. Miron", email = "dan.miron@psi.ch"}
 ]
-description = "The next-generation of C++ and Python API for GEMS.'"
+description = "The next-generation of C++ and Python API for GEMS."
 license = "GPL-3.0-or-later"
 keywords = ["equilibrium computations", "thermodynamic analysis", "Gibbs energy minimization", "chemical system"]
 
